@@ -1,0 +1,278 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#main-container {
+  display: flex;
+  justify-content: center;
+  max-height:100vh ;
+}
+#container {
+  font-family: 'SF Pro Display', sans-serif;
+  max-width: 380px;
+  margin: 50px auto;
+  padding: 20px;
+  color: #1a1a1a;
+}
+.image{
+  width: 550px;
+  height: auto;
+  object-fit: cover;
+  margin: 40px;
+  border-radius: 35px;
+  box-shadow: 12px 16px 6px rgba(0,0,0,0.3);
+}
+#slideshow {
+  width:100%;
+  height: 100%;
+  border-radius: 35px;
+}
+
+.intro{
+  display: flex;
+  flex-direction: column;
+}
+.intro h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.intro p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+/* Form Section */
+.form label {
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+.form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+.form .password {
+  width: 360px;
+  display: flex;
+  align-items: center;
+}
+.form .password span{
+  position: relative;
+  z-index: 2;
+  right: 35px;
+  bottom: 7px;
+  cursor: pointer;
+}
+.form input::placeholder {
+    color: #aaa;
+}
+.forgot {
+    display: block;
+    font-size: 13px;
+    color: #0056b3;
+    text-decoration: none;
+    text-align: right;
+    margin-top: -8px;
+    margin-bottom: 18px;
+}
+.btn {
+  background: #162D3A;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+.btn span{
+  font-weight:900;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+    
+}
+#dynamicBtn {
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Social Login */
+.or {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+    font-size: 14px;
+    color: #666;
+}
+.or::before { left: 0; }
+.or::after { right: 0; }
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.or::before,
+.or::after {
+    content: "";
+    height: 1px;
+    width: 40%;
+    background: #ddd;
+    position: absolute;
+    top: 50%;
+}
+.social-buttons button {
+    background: #f7f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.social-buttons button:hover {
+    background: #eef2f5;
+}
+
+/* Signup Link */
+.signup {
+    text-align: center;
+    font-size: 14px;
+}
+.signup a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+.bottom-tag {
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    margin-top: 160px;
+}
+@media only screen and (max-width: 431px) {
+ /* Make layout vertical */
+  #main-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    max-height: 844px;
+    background: #fff;
+  }
+
+  /* Image full width on top */
+  .image{
+    order: -1;
+    width: 330px;
+    height: 200px;
+    padding-top: 30px;
+    margin: 25px;
+    box-shadow:none;
+
+  }
+  /* Form container full width, nice padding */
+  #container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 20px 50px 40px 50px;
+    background: #fff;
+  }
+
+  /* Intro text centered */
+  .intro {
+    margin-bottom: 24px;
+  }
+  .intro h1 {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .intro p {
+    width: 395px;
+    font-size: 19px;
+    color: #555;
+    margin-top:6px;
+  }
+
+  /* Inputs smaller padding */
+  .form label {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  .form input {
+    color: #8897AD;
+    background: #D4D7E3;
+    border: 1px solid #8897AD;
+    padding: 12px;
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+
+  /* Forgot password */
+  .forgot {
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+
+  /* Sign in button */
+  .btn {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 10px;
+    color: white;
+  }
+  /* Divider */
+  .or {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: #666;
+    margin: 20px 0;
+  }
+  .or::before,
+  .or::after {
+    width: 30%;
+  }
+
+  /* Social buttons side-by-side */
+  .social-buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+  .social-buttons button {
+    flex: 1;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  /* Sign up link */
+  .signup {
+    margin-top: 20px;
+    font-size: 17px;
+    text-align: center;
+  }
+
+  /* Footer small */
+  .bottom-tag {
+    margin-top: 30px;
+    font-size: 12px;
+    text-align: center;
+  }
+}

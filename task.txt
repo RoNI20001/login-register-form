@@ -1,0 +1,4 @@
+1.Password strength meter.
+2.Show/hide password.
+3.Animated form toggle.
+4.Live error messages.
